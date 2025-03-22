@@ -6,6 +6,14 @@ This project is a lightweight note management app that allows users to create an
      alt="project example"
      style="width:70%; border-radius: 8px;" />
 
+# Use
+
+Main page:
+`http://localhost:8000/notes/`
+
+DRF Endpoints:
+`http://localhost:8000/notes/api/`
+
 # Installation
 
 Requirements:
