@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.contrib import messages
 
 from core.models import Note
 from notes.forms import NoteForm
@@ -13,8 +14,7 @@ def note_view(request):
         if form.is_valid():
             note = form.save(commit=False)
             note.save()
-            form.cleaned_data = {}
-            return render(request, 'notes/note_list.html', {'form': form})
+            messages.success(request, "Note saved successfully.")
     form = NoteForm()
     form.cleaned_data = {}
     return render(request, 'notes/note_list.html', {'form': form})
