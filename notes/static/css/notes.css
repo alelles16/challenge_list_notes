@@ -5,3 +5,30 @@
 .post-form {
     padding: 8px;
 }
+
+.post-form > p > label {
+    display: block;
+    min-width: 100%;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.post-form > p > input,
+.post-form > p > textarea,
+.post-form > p > select {
+    display: block;
+    padding-left: 8px !important;
+    min-width: 100%;
+    border-radius: 0.2rem;
+    border: 1px solid #495057 !important;
+}
+
+.messages {
+    padding: 10px;
+}
+
+.list-group-item {
+    padding-bottom: 16px !important;
+    padding-top: 16px !important;
+}

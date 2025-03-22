@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib import messages
@@ -12,11 +12,11 @@ def note_view(request):
     if request.method == "POST":
         form = NoteForm(request.POST)
         if form.is_valid():
-            note = form.save(commit=False)
-            note.save()
+            form.save()
             messages.success(request, "Note saved successfully.")
-    form = NoteForm()
-    form.cleaned_data = {}
+            return redirect("note_list")
+    else:
+        form = NoteForm()
     return render(request, 'notes/note_list.html', {'form': form})
 
 class ListNotes(APIView):

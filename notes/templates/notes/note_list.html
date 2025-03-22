@@ -11,9 +11,13 @@
         <div class="row g-5">
             <div class="col-md-8 col-lg-8">
                 <h4 class="mb3">📝 Notes Form</h4>
-                {% for message in messages %}
-                    <div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
-                {% endfor %}
+                {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                            <div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
                 <form method="POST" class="needs-validation post-form" novalidate>
                     {% csrf_token %}
                     {{ form.as_p }}

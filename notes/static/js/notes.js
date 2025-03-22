@@ -10,6 +10,11 @@ fetch("/notes/api/")
                 <div>
                     <h6 class="my-0">${note.title}</h6>
                     <small class="text-body-secondary">${note.content}</small>
+                    <div class="my-1">
+                        ${note.categories.map(item => (
+                            `<span class="badge text-bg-secondary ms-1 mb-1">${item}</span>`
+                        )).join("")}
+                    </div>
                 </div>
             </li>`;
     });
