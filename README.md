@@ -12,7 +12,9 @@ Requirements:
 - Docker
 - Docker compose
 
-In this project we're using docker and docker-compose to facilitate the installation and replication of the development environment, define volumes and custom networks.
+Replace `.env_example` with your own `.env` or use the same variables.
+
+In this project, we're using docker and docker-compose to facilitate the installation and replication of the development environment, and define volumes and custom networks.
 
 `docker-compose build`
 
@@ -20,7 +22,7 @@ Run project:
 
 `docker-compose up`
 
-In this case, we are using requirements.txt to install dependencies, but in the future we could implement poetry to manage dependencies in Docker.
+In this case, we are using requirements.txt to install dependencies, but in the future, we could implement poetry to manage dependencies in Docker.
 
 Shut down the project:
 
