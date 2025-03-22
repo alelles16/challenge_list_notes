@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # External apps
     'rest_framework',
+    # Own apps
+    'core',
+    'notes'
 ]
 
 MIDDLEWARE = [
